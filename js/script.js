@@ -18,9 +18,9 @@ if (navigator.serviceWorker) {
  * Input
  */
 function convert() {
-  var sideA = document.getElementById("side-a").value
-  var sideB = document.getElementById("side-b").value
-  var sideC = document.getElementById("side-c").value
+  const sideA = document.getElementById("side-a").value
+  const sideB = document.getElementById("side-b").value
+  const sideC = document.getElementById("side-c").value
 
   // process
   if (sideA == sideB == sideC) {
