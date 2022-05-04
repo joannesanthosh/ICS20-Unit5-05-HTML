@@ -18,16 +18,16 @@ if (navigator.serviceWorker) {
  * Input
  */
 function convert() {
-  var sideA = parseInt(document.getElementById("side-a").value)
-  var sideB = parseInt(document.getElementById("side-b").value)
-  var sideC = parseInt(document.getElementById("side-c").value)
+  var sideA = document.getElementById("side-a").value
+  var sideB = document.getElementById("side-b").value
+  var sideC = document.getElementById("side-c").value
 
   // process
-  if (sideA == sideB == sideC) {
+  if (sideA == sideB && sideB == sideC) {
     document.getElementById("answer").innerHTML = "The triangle is equilateral."
-  } else if (sideA == sideB) || (sideA == sideC) || (sideB == sideC); {
+  } else if ((sideA == sideB) || (sideA == sideC) || (sideB == sideC)) {
     document.getElementById("answer").innerHTML = "The triangle is isosceles."
-  } else if (sideA <> sideB <> sideC) {
+  } else {
     document.getElementById("answer").innerHTML = "The triangle is scalene."
   }
 } 
